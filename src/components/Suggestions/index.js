@@ -14,37 +14,37 @@ const items = [
   {
     key: String(Math.random()),
     img: img1,
-    label: 'Doações',
+    label: 'Recarga de celular',
   },
   {
     key: String(Math.random()),
     img: img2,
-    label: 'Doações',
+    label: 'Uber',
   },
   {
     key: String(Math.random()),
     img: img3,
-    label: 'Doações',
+    label: 'Transporte',
   },
   {
     key: String(Math.random()),
     img: img4,
-    label: 'Doações',
+    label: 'Sky',
   },
   {
     key: String(Math.random()),
     img: img5,
-    label: 'Doações',
+    label: 'Centro de Doações',
   },
   {
     key: String(Math.random()),
     img: img6,
-    label: 'Doações',
+    label: 'Pagar Conta',
   },
   {
     key: String(Math.random()),
     img: img7,
-    label: 'Doações',
+    label: 'Cobrar',
   },
 ]
 

@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView.attrs(() => ({
   horizontal: true,
+  showsHorizontalScrollIndicator: false,
   contentContainerStyle: {
     alignItems: 'center',
     paddingLeft: 16,
@@ -24,4 +25,5 @@ export const Label = styled.Text`
   font-weight: bold;
   margin-top: 8px;
   font-size: 14px;
+  text-align:center;
 `
