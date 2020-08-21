@@ -12,6 +12,7 @@ import {
 } from './styles'
 
 import Suggestions from '../../components/Suggestions';
+import Activities from '../../components/Activities';
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
           </Header>
 
           <Suggestions/>
+          <Activities/>
         </Container>
       </Wrapper>
     </>
