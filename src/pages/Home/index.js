@@ -1,8 +1,39 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StatusBar } from 'react-native'
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
+
+import { 
+  Wrapper, 
+  Container, 
+  Header, 
+  BalanceContainer, 
+  Balance, 
+  BalanceTitle,
+} from './styles'
+
+import Suggestions from '../../components/Suggestions';
 
 const Home = () => {
-  return <Text>Home</Text>;
+  return (
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#000"/>
+      <Wrapper>
+        <Container>
+          <Header>
+            <MaterialCommunityIcons name="qrcode-scan" size={30} color="#10c86e"/>
+
+            <BalanceContainer>
+              <BalanceTitle>Meu Saldo</BalanceTitle>
+              <Balance>R$ 0,00</Balance>
+            </BalanceContainer>
+            <AntDesign name="gift" size={30} color="#10c86e"/>
+          </Header>
+
+          <Suggestions/>
+        </Container>
+      </Wrapper>
+    </>
+  );
 }
 
 export default Home;
