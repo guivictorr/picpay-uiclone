@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Feather, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons'
 import {Switch} from 'react-native'
 
@@ -26,23 +26,40 @@ import {
   Img,
   CardBody,
   AddContainer,
-  AddLabel
+  AddLabel,
+  UseTicket,
+  UseTicketLabel
 } from './styles'
 
 import creditcard from '../../assets/images/credit-card.png'
 
 const Wallet = () => {
+  const [hideInfo, setHideInfo] = useState(true)
+  const [useBalance, setUseBalance] = useState(true)
+
+  function handleToggleVisibility(){
+    setHideInfo(!hideInfo)
+  }
+
+  function handleUseBalance(){
+    setUseBalance(!useBalance)
+  }
+
   return (
     <Wrapper>
-      <Header colors={['#52e78c','#1ab563']}>
+      <Header colors={
+        useBalance 
+        ? ['#52e78c','#1ab563'] 
+        : ['#D3D3D3', '#868686']
+      }>
         <HeaderContainer>
           <Title>Saldo PicPay</Title>
           <BalanceContainer>
             <Value>
-              R$ <Bold>0,00</Bold>
+              R$ <Bold>{hideInfo ? '-----' : '0,00'}</Bold>
             </Value>
-            <EyeButton>
-              <Feather name="eye" color="#fff" size={28}/>
+            <EyeButton onPress={handleToggleVisibility}>
+              <Feather name={hideInfo ? "eye-off" : "eye"} color="#fff" size={28}/>
             </EyeButton>
           </BalanceContainer>
           <Info>
@@ -50,7 +67,7 @@ const Wallet = () => {
           </Info>
           <Actions>
             <Action>
-              <MaterialCommunityIcons color="#fff" size={20} name="cash"/>
+              <MaterialCommunityIcons color="#fff" size={28} name="cash"/>
               <ActionLabel>Adicionar</ActionLabel>
             </Action>
             <Action>
@@ -64,7 +81,17 @@ const Wallet = () => {
         <UseBalanceTitle>
           Usar saldo ao pagar
         </UseBalanceTitle>
-        <Switch/>
+        <Switch 
+          value={useBalance} 
+          onValueChange={handleUseBalance}
+          trackColor={
+            {
+              true: '#52e78c', 
+              false: '#d3d3d3'
+            }
+          }
+          thumbColor={'#fff'}
+        />
       </UseBalance>
       <PaymentMethods>
         <PaymentMethodsTitle>
@@ -88,6 +115,10 @@ const Wallet = () => {
           </AddContainer>
         </Card>
       </PaymentMethods>
+      <UseTicket>
+        <MaterialCommunityIcons name="ticket-outline" size={20} color="#1ab563"/>
+        <UseTicketLabel>Usar código promocional</UseTicketLabel>
+      </UseTicket>
     </Wrapper>
   );
 }

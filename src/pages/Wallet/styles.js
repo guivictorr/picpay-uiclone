@@ -6,7 +6,7 @@ export const Wrapper = styled.View`
 `;
 
 export const Header = styled(LinearGradient)`
-  height: 300px;
+  height: 250px;
 `
 
 export const HeaderContainer = styled.SafeAreaView`
@@ -57,6 +57,7 @@ export const Action = styled.TouchableOpacity`
   border-radius: 50px;
   padding:6px;
   width:150px;
+  height: 40px;
   margin: 0 10px;
 `
 export const ActionLabel = styled.Text`
@@ -129,4 +130,17 @@ export const AddLabel = styled.Text`
   font-size: 18px;
   font-weight:bold;
   margin-left: 15px;
+`
+
+export const UseTicket = styled.TouchableOpacity`
+  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+  margin-top: 25px;
+`
+
+export const UseTicketLabel = styled.Text`
+  color: #0db060;
+  text-decoration:underline;
+  margin-left: 5px;
 `
