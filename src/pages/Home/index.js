@@ -13,6 +13,7 @@ import {
 
 import Suggestions from '../../components/Suggestions';
 import Activities from '../../components/Activities';
+import Banner from '../../components/Banner';
 import Tips from '../../components/Tips';
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
           <Suggestions/>
           <Activities/>
           <Tips/>
+          <Banner/>
         </Container>
       </Wrapper>
     </>
