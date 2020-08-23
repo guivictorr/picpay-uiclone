@@ -63,3 +63,70 @@ export const ActionLabel = styled.Text`
   color:#fff;
   margin-left: 5px;
 `
+
+export const UseBalance = styled.View`
+  background-color: #1c1c1e;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  justify-content:space-between;
+  padding: 0 16px;
+`
+
+export const UseBalanceTitle = styled.Text`
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+`
+
+export const PaymentMethods = styled.View`
+  margin-top: 25px;
+  padding: 0 16px;
+`
+
+export const PaymentMethodsTitle = styled.Text`
+  color: #868693;
+  text-transform: uppercase;
+`
+export const Card = styled.View`
+  background-color: #1e232a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+`
+
+export const CardBody = styled.View`
+  flex-direction:row;
+`
+
+export const CardDetails = styled.View`
+  flex: 1;
+  margin-right: 20px;
+`
+
+export const CardTitle = styled.Text`
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+`
+
+export const CardInfo = styled.Text`
+  color: rgba(255,255,255, 0.8);
+  margin-top: 15px;
+  font-size: 14px;
+`
+
+export const Img = styled.Image`
+  width: 60px;
+`
+export const AddContainer = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+`
+export const AddLabel = styled.Text`
+  color: #0db060;
+  font-size: 18px;
+  font-weight:bold;
+  margin-left: 15px;
+`
