@@ -7,6 +7,7 @@ import PayButton from '../components/PayButton';
 import Home from '../pages/Home';
 import Wallet from '../pages/Wallet';
 import Pay from '../pages/Pay';
+import Notifications from '../pages/Notifications';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -73,7 +74,7 @@ const BottomTab = () => {
       />
       <Screen 
         name="Notifications" 
-        component={Pay} 
+        component={Notifications} 
         options={{ title: 'Notificações' }}
       />
       <Screen 
