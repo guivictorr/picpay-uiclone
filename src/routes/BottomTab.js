@@ -34,7 +34,6 @@ const icons = {
 const BottomTab = () => {
   return (
     <Navigator
-      initialRouteName="Settings"
       screenOptions={({route, navigation}) => ({
         tabBarIcon: ({ color, size, focused }) => {
           if(route.name === 'Pay') {
