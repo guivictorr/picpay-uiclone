@@ -8,6 +8,7 @@ import Home from '../pages/Home';
 import Wallet from '../pages/Wallet';
 import Pay from '../pages/Pay';
 import Notifications from '../pages/Notifications';
+import Settings from '../pages/Settings';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -33,6 +34,7 @@ const icons = {
 const BottomTab = () => {
   return (
     <Navigator
+      initialRouteName="Settings"
       screenOptions={({route, navigation}) => ({
         tabBarIcon: ({ color, size, focused }) => {
           if(route.name === 'Pay') {
@@ -79,7 +81,7 @@ const BottomTab = () => {
       />
       <Screen 
         name="Settings" 
-        component={Pay} 
+        component={Settings} 
         options={{ title: 'Ajustes' }}
       />
     </Navigator>

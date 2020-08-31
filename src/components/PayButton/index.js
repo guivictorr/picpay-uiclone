@@ -10,15 +10,15 @@ const PayButton = ({focused}) => {
       <Button
         colors={
           focused 
-          ? ['#fff', '#ccc']
+          ? ['#005b27', '#00913e']
           : ['#00fc6c', '#00ac4a']
         }
-        start={[1, 0.2]}
+        start={[0, 0.1]}
         >
         <MaterialIcons 
           name="attach-money" 
           size={30} 
-          color={focused ? '#000' : '#fff'}
+          color='#fff'
         />
         <Label focused={focused}>Pagar</Label>
       </Button>
