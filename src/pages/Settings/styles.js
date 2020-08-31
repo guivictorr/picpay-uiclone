@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Wrapper = styled.SafeAreaView`
+export const Wrapper = styled.ScrollView`
   background-color: #000;
   flex: 1;
 `;
@@ -43,14 +43,4 @@ export const SeeProfile = styled.TouchableOpacity`
 export const SeeProfileText = styled.Text`
   color:#10c86e;
   font-size: 12px;
-`
-
-export const OptionsLabelContainer = styled.View`
-  background-color: #0f0f0f;
-`
-
-export const OptionsLabel = styled.Text`
-  color:#10c86e;
-  font-size: 13px;
-  margin: 15px 15px 8px;
 `

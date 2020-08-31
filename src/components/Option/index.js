@@ -7,7 +7,7 @@ const Option = ({ title, subTitle }) => {
     <OptionContainer>
       <OptionTextContainer>
         <OptionText>{title}</OptionText>
-        <OptionSubtitle>{subTitle}</OptionSubtitle>
+        {subTitle ? <OptionSubtitle>{subTitle}</OptionSubtitle> : null}
       </OptionTextContainer>
     </OptionContainer>
   );
