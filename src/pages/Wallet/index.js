@@ -56,7 +56,7 @@ const Wallet = () => {
           <Title>Saldo PicPay</Title>
           <BalanceContainer>
             <Value>
-              R$ <Bold>{hideInfo ? '-----' : '0,00'}</Bold>
+              R$ <Bold>{hideInfo ? '-----' : '10.000,00'}</Bold>
             </Value>
             <EyeButton onPress={handleToggleVisibility}>
               <Feather name={hideInfo ? "eye-off" : "eye"} color="#fff" size={28}/>

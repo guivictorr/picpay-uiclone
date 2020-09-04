@@ -1,8 +1,11 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 const Pay = () => {
-  return <Text>Pay</Text>;
+  return (
+    <View>
+      
+    </View>
+  );
 }
 
 export default Pay;

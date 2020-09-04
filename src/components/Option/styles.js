@@ -18,10 +18,10 @@ export const OptionTextContainer = styled.View`
 
 export const OptionText = styled.Text`
   font-weight:bold;
-  color: #fff;
+  color: ${({title}) => title === 'Sair' ? '#ff3322' : '#fff'};
 `
 
 export const OptionSubtitle = styled.Text`
   font-size: 13px;
-  color: gray;
+  color: ${({textColor}) => textColor ? textColor : 'gray'};
 `
