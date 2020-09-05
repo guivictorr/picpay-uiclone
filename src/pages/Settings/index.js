@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Option from '../../components/Option'
 import OptionLabel from '../../components/OptionLabel'
 
 import { 
@@ -63,7 +62,7 @@ const Settings = () => {
           <SeeProfileText>Ver meu perfil</SeeProfileText>
         </SeeProfile>
       </Header>
-      {categories.map(item => <OptionLabel title={item.title} category={item.category}/>)}
+      {categories.map(item => <OptionLabel title={item.title} category={item.category} key={item.category}/>)}
     </Wrapper>
   );
 }

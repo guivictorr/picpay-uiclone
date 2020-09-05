@@ -112,7 +112,6 @@ const options = [
   {
     category: 'exit',
     title: 'Sair',
-    color: 'red',
   },
 ]
 
@@ -123,7 +122,7 @@ const OptionLabel = ({title, category}) => {
       {options.map(item => {
         if(item.category === category){
           return (
-            <Option title={item.title} subTitle={item.subTitle} color={item.color}/>
+            <Option title={item.title} subTitle={item.subTitle} color={item.color} key={item.title}/>
           )
         }
       })}
