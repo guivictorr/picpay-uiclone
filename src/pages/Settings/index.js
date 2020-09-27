@@ -1,70 +1,84 @@
-import React from 'react';
+import React from "react";
+import { FlatList } from "react-native";
 
-import OptionLabel from '../../components/OptionLabel'
+import OptionLabel from "../../components/OptionLabel";
 
-import { 
-  Wrapper, 
-  Header, 
-  HelpText, 
-  HelpButton, 
-  SeeProfileText ,
+import {
+  Wrapper,
+  Header,
+  HelpText,
+  HelpButton,
+  SeeProfileText,
   Img,
   UserName,
   RealUserName,
   SeeProfile,
-} from './styles'
+} from "./styles";
 
-
-import avatar from '../../assets/images/avatar.png'
+import avatar from "../../assets/images/avatar.png";
 
 const categories = [
   {
-    title: 'Minha Conta',
-    category: 'myaccount',
+    title: "Minha Conta",
+    category: "myaccount",
   },
   {
-    title: 'Promoções',
-    category: 'promotions',
+    title: "Promoções",
+    category: "promotions",
   },
   {
-    title: 'Minhas assinaturas',
-    category: 'mysignatures',
+    title: "Minhas assinaturas",
+    category: "mysignatures",
   },
   {
-    title: 'Para o meu negócio',
-    category: 'mybusiness',
+    title: "Para o meu negócio",
+    category: "mybusiness",
   },
   {
-    title: 'Configurações',
-    category: 'config',
+    title: "Configurações",
+    category: "config",
   },
   {
-    title: 'Geral',
-    category: 'general',
+    title: "Geral",
+    category: "general",
   },
   {
-    category: 'exit',
+    category: "exit",
   },
-  
-]
+];
 
 const Settings = () => {
+  function renderItem({ item }) {
+    return (
+      <OptionLabel
+        title={item.title}
+        category={item.category}
+        key={item.category}
+      />
+    );
+  }
+
   return (
     <Wrapper>
       <Header>
         <HelpButton>
           <HelpText>Ajuda</HelpText>
         </HelpButton>
-        <Img source={avatar}/>
+        <Img source={avatar} />
         <UserName>@guivic</UserName>
         <RealUserName>Guilherme Victor</RealUserName>
         <SeeProfile>
           <SeeProfileText>Ver meu perfil</SeeProfileText>
         </SeeProfile>
       </Header>
-      {categories.map(item => <OptionLabel title={item.title} category={item.category} key={item.category}/>)}
+      <FlatList
+        data={categories}
+        keyExtractor={(item) => item.category}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
+      />
     </Wrapper>
   );
-}
+};
 
 export default Settings;
